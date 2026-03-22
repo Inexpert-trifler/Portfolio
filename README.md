@@ -51,11 +51,7 @@ I focus on:
 
 ---
 
-## 📸 Preview
 
-![Portfolio Preview](https://via.placeholder.com/1200x600?text=Portfolio+Preview)
-
----
 
 ## 🚀 Getting Started (Local Setup)
 
