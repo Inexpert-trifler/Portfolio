@@ -12,8 +12,8 @@ import { Skills } from "@/components/sections/skills";
 import { Trust } from "@/components/sections/trust";
 import { Vibe } from "@/components/sections/vibe";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import Reveal from "@/components/ui/reveal";
 import { achievements } from "@/data/achievements";
-import { projects } from "@/data/projects";
 import {
   contactLinks,
   navItems,
@@ -95,15 +95,25 @@ export default function HomePage() {
           </div>
         </header>
         <div className="pt-28 sm:pt-32">
-          <Hero id="home" />
+          <Reveal>
+            <Hero id="home" />
+          </Reveal>
         </div>
         <Trust id="trust" items={trustItems} />
         <About id="about" />
-        <Projects id="projects" projects={projects} />
-        <Skills id="skills" categories={skillCategories} />
-        <Achievements id="achievements" achievements={achievements} />
+        <Reveal>
+          <Projects id="projects" />
+        </Reveal>
+        <Reveal>
+          <Skills id="skills" categories={skillCategories} />
+        </Reveal>
+        <Reveal>
+          <Achievements id="achievements" achievements={achievements} />
+        </Reveal>
         <Vibe id="vibe" title={vibeContent.title} description={vibeContent.description} />
-        <Contact id="contact" links={contactLinks} />
+        <Reveal>
+          <Contact id="contact" links={contactLinks} />
+        </Reveal>
         <Footer name="Saransh Yadav" />
       </div>
     </main>

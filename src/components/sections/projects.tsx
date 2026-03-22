@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-import Card from "@/components/ui/card";
-import { Project } from "@/data/projects";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import { projects } from "@/data/projects";
 
 type ProjectsProps = {
   id: string;
-  projects: Project[];
 };
 
-export function Projects({ id, projects }: ProjectsProps) {
+export function Projects({ id }: ProjectsProps) {
   return (
     <section id={id} className="scroll-mt-28 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-12">
@@ -37,60 +36,28 @@ export function Projects({ id, projects }: ProjectsProps) {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <BentoGrid className="lg:grid-rows-3">
             {projects.map((project, index) => (
-              <motion.div
+              <BentoCard
                 key={project.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className={project.featured ? "md:col-span-2 xl:col-span-1" : ""}
-              >
-                <Card className="flex h-full flex-col gap-5">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-                    {project.featured ? (
-                      <span className="rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-300">
-                        Featured
-                      </span>
-                    ) : null}
-                  </div>
-
-                  <p className="text-sm leading-7 text-zinc-400">{project.description}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((item) => (
-                      <span key={item} className="rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-300">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-auto flex items-center gap-5 text-sm text-zinc-300">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 transition duration-300 hover:text-white"
-                    >
-                      <Github className="h-4 w-4" />
-                      GitHub
-                    </a>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 transition duration-300 hover:text-white"
-                    >
-                      <ArrowUpRight className="h-4 w-4" />
-                      Live
-                    </a>
-                  </div>
-                </Card>
-              </motion.div>
+                name={project.featured ? `${project.title} · Featured` : project.title}
+                description={project.description}
+                href={project.github}
+                cta="View Project"
+                Icon={GitHubLogoIcon}
+                background={
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-cyan-500 opacity-10" />
+                }
+                className={
+                  index === 0
+                    ? "lg:col-span-2 lg:row-span-2"
+                    : index === 1
+                      ? "lg:col-span-1 lg:row-span-2"
+                      : "lg:col-span-1"
+                }
+              />
             ))}
-          </div>
+          </BentoGrid>
         </motion.div>
       </div>
     </section>

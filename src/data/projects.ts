@@ -1,56 +1,65 @@
 export type Project = {
   title: string;
   description: string;
-  techStack: string[];
-  githubUrl: string;
-  liveUrl: string;
+  tech: string[];
+  github: string;
+  live: string;
   featured: boolean;
 };
 
 export const projects: Project[] = [
   {
-    title: "BuildSprint",
+    title: "Portfolio Website",
     description:
-      "A hackathon workflow platform that helps teams organize ideas, tasks, and pitches in one fast-moving workspace.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-    githubUrl: "https://github.com/Inexpert-trifler",
-    liveUrl: "https://example.com",
+      "A modern developer portfolio built with Next.js, featuring interactive UI, glowing effects, and smooth animations.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/Inexpert-trifler/Portfolio",
+    live: "",
     featured: true,
   },
   {
-    title: "Campus Connect",
+    title: "FinSight AI",
     description:
-      "A student-first community app for sharing opportunities, project ideas, and collaboration updates across campus.",
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
-    githubUrl: "https://github.com/Inexpert-trifler",
-    liveUrl: "https://example.com",
+      "An AI-powered project focused on financial insights and smart data analysis using modern JavaScript tools.",
+    tech: ["JavaScript"],
+    github: "https://github.com/Inexpert-trifler/FinSightAI",
+    live: "",
     featured: true,
   },
   {
-    title: "Pitch Deck AI",
+    title: "RIFT Project",
     description:
-      "A simple tool for turning startup notes into clean pitch deck outlines with fast summaries and clear structure.",
-    techStack: ["Next.js", "OpenAI API", "Tailwind CSS"],
-    githubUrl: "https://github.com/Inexpert-trifler",
-    liveUrl: "https://example.com",
+      "A hackathon-based project built with TypeScript, focused on solving real-world problems with scalable architecture.",
+    tech: ["TypeScript"],
+    github: "https://github.com/Inexpert-trifler/RIFT-Project",
+    live: "",
+    featured: true,
+  },
+  {
+    title: "Netflix Clone",
+    description:
+      "A Netflix-inspired UI clone built using HTML and CSS, focusing on responsive design and modern layout techniques.",
+    tech: ["HTML", "CSS"],
+    github: "https://github.com/Inexpert-trifler/Netflix-clone",
+    live: "",
+    featured: true,
+  },
+  {
+    title: "IBM Project",
+    description:
+      "A project developed as part of IBM initiative, showcasing core web development skills using structured UI.",
+    tech: ["HTML", "CSS"],
+    github: "https://github.com/Inexpert-trifler/IBM-Project",
+    live: "",
     featured: false,
   },
   {
-    title: "Dev Journal",
+    title: "Inexpert Trifler",
     description:
-      "A minimal progress tracker for documenting daily learning, experiments, and build streaks.",
-    techStack: ["TypeScript", "React", "Supabase"],
-    githubUrl: "https://github.com/Inexpert-trifler",
-    liveUrl: "https://example.com",
-    featured: false,
-  },
-  {
-    title: "Team Match",
-    description:
-      "A quick matchmaking app for hackathon participants to discover teammates by skills, interests, and availability.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma"],
-    githubUrl: "https://github.com/Inexpert-trifler",
-    liveUrl: "https://example.com",
+      "A personal experimental repository exploring coding ideas, concepts, and development practices.",
+    tech: ["JavaScript"],
+    github: "https://github.com/Inexpert-trifler/Inexpert-trifler",
+    live: "",
     featured: false,
   },
 ];
