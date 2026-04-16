@@ -8,6 +8,7 @@ Built to showcase my projects, skills, and passion for building real-world produ
 
 ---
 
+
 ## ✨ About Me
 
 I’m a First-Year B.Tech Computer Science student based in Bangalore, India 🇮🇳  
