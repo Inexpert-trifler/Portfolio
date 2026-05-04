@@ -15,6 +15,7 @@ const bodyFont = DM_Sans({
   variable: "--font-body",
 });
 
+
 export const metadata: Metadata = {
   title: "Saransh Yadav | Portfolio",
   description: "Modern portfolio for Saransh Yadav, a vibecoder and hackathon enthusiast building impactful tech products.",
