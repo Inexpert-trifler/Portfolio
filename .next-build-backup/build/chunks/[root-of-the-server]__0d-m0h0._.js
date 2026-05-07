@@ -3,21 +3,25 @@ module.exports = [
 
 const mod = __turbopack_context__.x("path", () => require("path"));
 
+    
 module.exports = mod;
 }),
 "[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
 
 const mod = __turbopack_context__.x("url", () => require("url"));
 
+    
 module.exports = mod;
 }),
 "[externals]/fs [external] (fs, cjs)", ((__turbopack_context__, module, exports) => {
 
 const mod = __turbopack_context__.x("fs", () => require("fs"));
+    
 
 module.exports = mod;
 }),
 "[project]/postcss.config.mjs [postcss] (ecmascript)", ((__turbopack_context__) => {
+    
 "use strict";
 
 __turbopack_context__.s([
